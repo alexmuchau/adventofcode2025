@@ -1,0 +1,1 @@
+gcc day1/main.c -o day1/main.out && ./day1/main.ou
