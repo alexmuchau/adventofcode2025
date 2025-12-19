@@ -1,24 +1,5 @@
 #include "../tools/methods.c"
 
-int get_decimals_case(long int number) {
-    int count = 0;
-
-    if (number == 0) {
-        count = 1;
-    } else {
-        if (number < 0) {
-            number = -number;
-        }
-
-        while (number > 0) {
-            number /= 10;
-            count++;
-        }
-    }
-
-    return count;
-}
-
 long int check_has_sequence(long int number) {
     int size = get_decimals_case(number);
     int half_size = size / 2;

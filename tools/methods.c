@@ -17,8 +17,27 @@ char * get_row(FILE *fptr) {
     fgets(text, size, fptr);
 
     text[size + 1] = '|';
-
+    fgetc(fptr);
     return text;
+}
+
+int get_decimals_case(long int number) {
+    int count = 0;
+
+    if (number == 0) {
+        count = 1;
+    } else {
+        if (number < 0) {
+            number = -number;
+        }
+
+        while (number > 0) {
+            number /= 10;
+            count++;
+        }
+    }
+
+    return count;
 }
 
 #endif
